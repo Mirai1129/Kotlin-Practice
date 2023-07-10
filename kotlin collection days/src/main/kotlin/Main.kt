@@ -1,15 +1,29 @@
 fun main() {
-    val myName: String = "Mirai"
-    val myId: Int = 1129
-    val targetArgument = callName(myName)
-
-    printOnTerminal(targetArgument)
+    whenCondition()
+    forScope()
 }
 
-fun callName(name: String = "everyone"): String {
-    return "Hello $name"
+fun whenCondition() {
+    println("x = ???")
+    // when 表達式
+    when (readln().toInt()) {
+        1 -> {
+            println("x == 1")
+        }
+        2 -> {
+            println("x == 2")
+        }
+        else -> {
+            println("x is neither 1 nor 2")
+        }
+    }
 }
 
-fun printOnTerminal(arg: String) {
-    println(arg)
+fun forScope() {
+    // for 迴圈
+    val items = intArrayOf(1, 2, 3, 4, 5)
+
+    for (item in items) {
+        println(item)
+    }
 }
